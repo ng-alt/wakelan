@@ -1,0 +1,39 @@
+.TH wakelan 1 "29 August 1998"
+.IX wakelan
+.SH NAME
+wakelan - wake up a host with a wake-on-lan packet
+.SH SYNOPSIS
+wakelan 
+.RI [options]
+.RI [ mac ]
+.RI [ bcast ]
+.RI [ port ]
+.SH DESCRIPTION
+WakeLan sends a properly formatted UDP packet across the network which will
+cause a wake-on-lan enabled computer to power on.  
+.SH OPTIONS
+.TP
+.I "\-m mac"
+MAC address of host to wake.  MAC address should be six bytes, long, colons to
+separate bytes are optional.
+.TP
+.I "\-p bcast"
+Broadcast address to send packet to.
+.TP
+.I "\-p port"
+UDP port to send the packet to.
+
+.SH EXAMPLE
+.EX
+    ./wakelan 05:5a:ef:97:12:88
+    ./wakelan 325f9aed3015 10.255.255.255
+    ./wakelan 325f9aed3015 lan-bcast
+.EE
+.SH COPYING
+Copyright (C) 1998 Christopher Chan-Nui
+
+wakelan is distributed under the GNU public license\&.  See the file
+COPYING for details\&.
+
+.SH AUTHOR
+Christopher Chan-Nui <channui+wakelan@freeware.tiny.org>

@@ -1,0 +1,18 @@
+Begin3
+Title:          wakelan(1) -- Send a wake-on-lan packet
+Version:        1.1
+Entered-date:   19980829
+Description:    WakeLan sends a properly formatted UDP packet across the
+		network which will cause a wake-on-lan enabled computer to
+		power on.
+Keywords:       wake lan networking
+Author:         channui+wakelan@freeware.tiny.org (Christopher Chan-Nui)
+Maintained-by:  channui+wakelan@freeware.tiny.org (Christopher Chan-Nui)
+Primary-site:   sunsite.unc.edu /pub/Linux/system/Network/misc
+		25k wakelan-1.1.tar.gz
+		1k  wakelan.lsm
+Alternate-site: 
+Original-site:  
+Platforms:      Linux, AIX
+Copying-policy: GPL
+End

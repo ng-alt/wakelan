@@ -1,0 +1,74 @@
+		__        __    _        _                
+		\ \      / /_ _| | _____| |    __ _ _ __  
+		 \ \ /\ / / _` | |/ / _ \ |   / _` | '_ \ 
+		  \ V  V / (_| |   <  __/ |__| (_| | | | |
+		   \_/\_/ \__,_|_|\_\___|_____\__,_|_| |_|
+					       Version 1.0
+
+
+Got a fancy new PC with wake-on-lan?  Want to boot it in the middle of the
+night to back it up?  Or just too lazy to get off your couch to boot your other
+machine?  Well this package is for you!
+
+WakeLan sends a properly formatted UDP packet across the network which will
+cause a wake-on-lan enabled computer to power on.  You'll need to find out the
+MAC address of your PC.  Under linux ifconfig is useful to discover this
+information, windoze users can use winipcfg.
+
+
+INSTALLATION
+
+To install, simply:
+
+    ./configure
+    make
+    make install
+
+If you've got one host that you like to wake up by default you can use the
+DEFAULTMAC macro, to select the network you want to broadcast to you can use
+the DEFAULTTARGET macro.
+
+
+USAGE
+
+Usage: ./wakelan [options] [mac] [broadcast] [port]
+    -b addr    broadcast address
+    -m mac     mac address of host
+    -p port    UDP port to broadcast to
+    -v[v]      version
+
+By default the broadcast is 255.255.255.255, and the default port is 32767
+
+
+EXAMPLES
+
+    ./wakelan
+    ./wakelan 05:5a:ef:97:12:88
+    ./wakelan 32:5f:9a:ed:30:15 10.255.255.255
+    ./wakelan -b mynet-bcast -m 5:e:72:a:32:00
+
+
+AVAILABILITY
+
+Hopefully this package will end up at
+
+    ftp://sunsite.unc.edu/pub/Linux/system/Network/misc/wakelan-1.0.tar.gz
+
+
+COPYRIGHT
+
+Copyright (C) 1998 by Christopher Chan-Nui
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
