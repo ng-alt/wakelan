@@ -13,6 +13,6 @@ clean:
 	rm -f $(OBJS)
 
 install:  wol
-	install -d -m0755 $(TARGETDIR)/usr
-	install -d -m0755 $(TARGETDIR)/usr/sbin
-	install -m0755 wol $(TARGETDIR)/usr/sbin/wol
+	install -d -m0755 $(PKG_INSTALL_DIR)/usr
+	install -d -m0755 $(PKG_INSTALL_DIR)/usr/sbin
+	install -m0755 wol $(PKG_INSTALL_DIR)/usr/sbin/wol
